@@ -37,10 +37,10 @@ void Vector::push_back(double d)
         arr[i]=elem[i];
       }
     }
+    delete[] elem;
   }else{
     arr[0]=d;
   }
-  delete[] elem;
   elem=arr;
 }
 
