@@ -4,13 +4,17 @@
 Vector::Vector(std::initializer_list<double> lst)
 :elem{new double[lst.size()]}, sz{lst.size()}
 {
+  std::cout<<"Costructor ("<< elem <<") "<<"\n";
   std::copy(lst.begin(),lst.end(),elem);
 }
 Vector::Vector()
   :sz{0}
-{}
+{
+  std::cout<<"Costructor ("<< "00" <<") "<<"\n";
+}
 Vector::~Vector()
 {
+  std::cout<<"Destructor"<<"\n";
   delete[] elem;
 }
 double& Vector::operator[](int i)

@@ -12,6 +12,6 @@ public:
   void push_back(double);
 private:
   double *elem; // pointer to the elements
-  int sz; // the number of elements
+  unsigned int sz; // the number of elements
 };
 Vector read(std::istream &is);
